@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jubilee-ade7a": {
+      "hosting": {
+        "thejube": [
+          "thejube"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jubilee-ade7a"
+  }
+}
