@@ -13,3 +13,65 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 @import '~ngx-toastr/toastr';
+
+h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.6em;
+    letter-spacing: .08em;
+}
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.2em;
+    letter-spacing: .07em;
+}
+h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.8em;
+    letter-spacing: .06em;
+}
+h4 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.4em;
+    letter-spacing: .05em;
+}
+h5 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .04em;
+}
+h6 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.2em;
+    letter-spacing: .04em;
+}
+
+h1.font-secondary {
+    font-family: "Lora", serif;
+    font-size: 2.6em;
+    letter-spacing: .08em;
+}
+h2.font-secondary {
+    font-family: "Lora", serif;
+    font-size: 2.2em;
+    letter-spacing: .07em;
+}
+h3.font-secondary {
+    font-family: "Lora", serif;
+    font-size: 1.8em;
+    letter-spacing: .06em;
+}
+h4.font-secondary {
+    font-family: "Lora", serif;
+    font-size: 1.4em;
+    letter-spacing: .05em;
+}
+h5.font-secondary {
+    font-family: "Lora", serif;
+    font-size: 1.2em;
+    letter-spacing: .04em;
+}
+h6.font-secondary {
+    font-family: "Lora", serif;
+    font-size: 1.2em;
+    letter-spacing: .04em;
+}

@@ -3,5 +3,7 @@ export interface ChurchEvent {
     description: string,
     eventStart: Date,
     eventEnd: Date,
-    announcementStart: Date
+    announcementStart: Date,
+    address?: string
+    imagePath: string
 }

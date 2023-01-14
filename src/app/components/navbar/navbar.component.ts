@@ -35,6 +35,10 @@ export class NavbarComponent {
     {
       title: 'Get To Know Us',
       link: '/get-to-know-us'
+    },
+    {
+      title: 'Events',
+      link: '/events'
     }
   ]
 

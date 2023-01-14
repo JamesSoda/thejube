@@ -20,7 +20,7 @@
         <h2 [routerLink]="menuItem.link" class="ms-4">
           {{ menuItem.title }}
         </h2>
-        <hr/>
+        <hr />
       </div>
     </div>
   </div>
@@ -42,66 +42,9 @@
     <img src="./assets/jubilee_black.png" alt="Jubilee" height="60px" />
   </a>
 
-  <button
-    class="navbar-toggler navbar-toggler-right me-5"
-    type="button"
-    (click)="isNavbarCollapsed = !isNavbarCollapsed"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div
-    [ngbCollapse]="isNavbarCollapsed"
-    class="navbar-collapse ms-5"
-    id="navbarSupportedContent"
-  >
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/get-to-know-us">Get to Know Us</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#">Disabled</a>
-      </li>
-
-      <li
-        class="nav-item"
-        ngbDropdown
-        #drop="ngbDropdown"
-        display="dynamic"
-        placement="bottom-start"
-        (mouseenter)="drop.open()"
-        (mouseleave)="drop.close()"
-      >
-        <a
-          class="nav-link"
-          tabindex="0"
-          ngbDropdownAnchor
-          id="navbarDropdown3"
-          role="button"
-          >Dynamic</a
-        >
-        <div
-          ngbDropdownMenu
-          aria-labelledby="navbarDropdown3"
-          class="dropdown-menu"
-        >
-          <a ngbDropdownItem href="#" (click)="$event.preventDefault()"
-            >Action</a
-          >
-          <a ngbDropdownItem href="#" (click)="$event.preventDefault()"
-            >Another action</a
-          >
-          <a ngbDropdownItem href="#" (click)="$event.preventDefault()"
-            >Something else here</a
-          >
-        </div>
-      </li>
-    </ul>
-  </div>
+  <ul class="ms-5 navbar-nav mr-auto">
+    <li class="nav-item" *ngFor="let menuItem of menu | slice : 1">
+      <a class="nav-link" [routerLink]="menuItem.link">{{ menuItem.title }}</a>
+    </li>
+  </ul>
 </nav>

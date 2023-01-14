@@ -107,8 +107,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "thejube:build:production",
-            "firebaseProject": "jubilee-ade7a",
-            "firebaseHostingSite": "thejube"
+            "firebaseProject": "thejube-staging",
+            "firebaseHostingSite": "thejube-staging"
           }
         }
       }

@@ -9,15 +9,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/pages/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/pages/home/home.component';
 
 import { ToastrModule } from 'ngx-toastr';
-import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GetToKnowUsComponent } from './components/pages/get-to-know-us/get-to-know-us.component';
+import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { EventsComponent } from './components/pages/events/events.component';
+import { EventCardComponent } from './components/pages/events/event-card/event-card.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HomeComponent,
     PageNotFoundComponent,
     FooterComponent,
-    GetToKnowUsComponent
+    GetToKnowUsComponent,
+    EventsComponent,
+    EventCardComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AngularFirestoreModule,
     NgbModule,
     ToastrModule.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [
     ScreenTrackingService, UserTrackingService

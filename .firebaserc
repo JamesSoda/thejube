@@ -1,14 +1,14 @@
 {
   "targets": {
-    "jubilee-ade7a": {
+    "thejube-staging": {
       "hosting": {
         "thejube": [
-          "thejube"
+          "thejube-staging"
         ]
       }
     }
   },
   "projects": {
-    "default": "jubilee-ade7a"
+    "default": "thejube-staging"
   }
 }
