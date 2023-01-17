@@ -1,6 +1,15 @@
 <h1 class="mt-4 text-center">Events</h1>
 
-<app-event-card
-  *ngFor="let event of events$ | async"
-  [event]="event"
-></app-event-card>
+<div class="text-center p-5">
+  <div class="spinner-grow" role="status" style="width: 3rem; height: 3rem" *ngIf="!(events$ | async)">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <ng-container *ngIf="events$ | async as events">
+    <div *ngIf="events">
+      <h3>This Month</h3>
+
+      <app-event-card *ngFor="let event of events" [event]="event"></app-event-card>
+    </div>
+  </ng-container>
+</div>
