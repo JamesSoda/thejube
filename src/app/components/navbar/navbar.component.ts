@@ -1,3 +1,4 @@
+import { ScreenSizeService } from './../../services/screen-size.service';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
@@ -25,7 +26,7 @@ export class NavbarComponent {
 
   isNavbarCollapsed: boolean = true;
 
-  constructor(readonly toastr: ToastrService) { }
+  constructor(readonly toastr: ToastrService, readonly screenSizeService: ScreenSizeService) { }
 
   menu: MenuLink[] = [
     {

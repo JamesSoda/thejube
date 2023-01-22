@@ -17,7 +17,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GetToKnowUsComponent } from './components/pages/get-to-know-us/get-to-know-us.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { EventsComponent } from './components/pages/events/events.component';
 import { EventCardComponent } from './components/pages/events/event-card/event-card.component';
 
@@ -39,8 +38,7 @@ import { EventCardComponent } from './components/pages/events/event-card/event-c
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     NgbModule,
-    ToastrModule.forRoot(),
-    FlexLayoutModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     ScreenTrackingService, UserTrackingService
