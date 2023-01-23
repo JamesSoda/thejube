@@ -1,0 +1,16 @@
+name: Cypress
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Component Testing
+        uses: cypress-io/github-action@v5
+        with:
+          component: true
+      - name: E2E Testing
+        uses: cypress-io/github-action@v5
+        with:
+          install: false
