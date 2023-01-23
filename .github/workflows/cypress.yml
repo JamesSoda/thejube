@@ -1,7 +1,7 @@
-name: Cypress
+name: Tests
 on: [push]
 jobs:
-  cypress-run:
+  component-testing:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -10,7 +10,3 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           component: true
-      - name: E2E Testing
-        uses: cypress-io/github-action@v5
-        with:
-          install: false
