@@ -1,5 +1,4 @@
-<!--TODO: FIX DYNAMIC NAVBAR-->
-<div *ngIf="screenSizeService.isMobile">
+<div *ngIf="screenSizeService.isMobile" data-cy="mobileNavbar">
   <div
     class="position-fixed w-100 h-100"
     style="top: 0; right: 0"
@@ -7,6 +6,7 @@
     *ngIf="!isNavbarCollapsed"
     [@show-side-nav]
     (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    data-cy="mobileNavbarContent"
   >
     <h3>
       <i
@@ -28,6 +28,7 @@
 
   <h3 *ngIf="isNavbarCollapsed">
     <i
+      data-cy="navbarCollapseBtn"
       class="position-fixed fa-solid fa-bars"
       style="top: 2.5%; right: 5%"
       (click)="isNavbarCollapsed = !isNavbarCollapsed"
@@ -35,7 +36,7 @@
   </h3>
 </div>
 
-<nav
+<nav data-cy="desktopNavbar"
   class="navbar navbar-expand-md navbar-light bg-white py-2"
   *ngIf="!screenSizeService.isMobile">
   
