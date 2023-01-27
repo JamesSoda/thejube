@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "thejube-staging": {
+      "hosting": {
+        "thejube": [
+          "thejube-staging"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "thejube-staging"
+  }
+}
