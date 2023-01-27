@@ -7,6 +7,13 @@ jobs:
   deploy_staging_live:
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for Tests to succeed
+        uses: lewagon/wait-on-check-action@v1.2.0
+        with:
+          ref: main
+          check-name: component-testing
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 20
       - uses: actions/checkout@v2
       - run: npm ci && npm run build-staging
       - uses: FirebaseExtended/action-hosting-deploy@v0
