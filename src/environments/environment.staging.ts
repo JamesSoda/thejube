@@ -1,4 +1,4 @@
-// LOCAL CONFIGURATION
+// STAGING CONFIGURATION
 
 export const environment = {
     firebase: {
