@@ -8,13 +8,11 @@
     (click)="isNavbarCollapsed = !isNavbarCollapsed"
     data-cy="mobileNavbarContent"
   >
-    <h3>
-      <i
-        class="position-fixed fa-regular fa-circle-xmark"
-        style="top: 2.5%; right: 5%"
-        (click)="isNavbarCollapsed = !isNavbarCollapsed"
-      ></i>
-    </h3>
+    <i
+      class="position-fixed fa-regular fa-circle-xmark"
+      style="top: 1.5%; right: 4%"
+      (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    ></i>
 
     <div class="mt-5 text-start">
       <div *ngFor="let menuItem of menu">
@@ -26,20 +24,20 @@
     </div>
   </div>
 
-  <h3 *ngIf="isNavbarCollapsed">
-    <i
-      data-cy="navbarCollapseBtn"
-      class="position-fixed fa-solid fa-bars"
-      style="top: 2.5%; right: 5%"
-      (click)="isNavbarCollapsed = !isNavbarCollapsed"
-    ></i>
-  </h3>
+  <i
+    *ngIf="isNavbarCollapsed"
+    data-cy="navbarCollapseBtn"
+    class="position-fixed fa-solid fa-bars"
+    style="top: 1.5%; right: 4%"
+    (click)="isNavbarCollapsed = !isNavbarCollapsed"
+  ></i>
 </div>
 
-<nav data-cy="desktopNavbar"
+<nav
+  data-cy="desktopNavbar"
   class="navbar navbar-expand-md navbar-light bg-white py-2"
-  *ngIf="!screenSizeService.isMobile">
-  
+  *ngIf="!screenSizeService.isMobile"
+>
   <a class="navbar-brand ms-5 me-5" routerLink="/">
     <img src="./assets/jubilee_black.png" alt="Jubilee" height="60px" />
   </a>

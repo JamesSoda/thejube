@@ -1,3 +1,7 @@
-<div *ngIf="event" class="card text-dark w-50">
-    <h3 class="">{{event.title}}</h3>
+<div
+  *ngIf="event"
+  class="event-card card text-dark w-75 mx-auto"
+  [ngStyle]="{ 'background-image': 'url(' + event.imagePath + ')' }"
+>
+  <h3 class="">{{ event.title }}</h3>
 </div>

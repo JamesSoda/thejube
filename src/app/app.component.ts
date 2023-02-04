@@ -6,7 +6,9 @@ import { ActivatedRoute } from '@angular/router';
   template: `
     <div class="bg-dark text-white">
       <app-navbar></app-navbar>
-      <router-outlet></router-outlet>
+        <div style="overflow-y: auto" class="pb-5">
+          <router-outlet></router-outlet>
+        </div>
       <app-footer></app-footer>
     </div>
   `,

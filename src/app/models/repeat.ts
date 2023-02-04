@@ -1,10 +1,13 @@
 import { WeekDay } from "@angular/common";
+import { NgbDateStruct } from "@ng-bootstrap/ng-bootstrap";
+
+export type Repeat = WeekDayRepeat | DateRepeat
 
 export interface WeekDayRepeat {
-    weekDay: WeekDay
+    weekDays: WeekDay[]
+    weeks?: 1 | 2 | 3 | 4 | 5
 }
 
-export interface MonthlyWeekDayRepeat {
-    weeks: 1 | 2 | 3 | 4 | 5
-    weekDays: WeekDay[]
+export interface DateRepeat {
+    dates: NgbDateStruct[]
 }

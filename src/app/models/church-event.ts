@@ -12,5 +12,5 @@ export interface ChurchEvent {
     }
     announcementStart: NgbDate
     address?: string
-    imagePath: string
+    imagePath?: string
 }
